@@ -10,12 +10,12 @@ class Perro {
       <p><strong>Nombre:</strong> ${this.nombre}</p>
       <p><strong>Raza:</strong> ${this.raza}</p>
       <p><strong>Edad:</strong> ${this.edad}</p>
-      <p>🐶 ¡Guau guau!</p>
+      <p>🐶 ¡raf raf!</p>
     `;
   }
 }
 
-function mostrarPerro() {
+document.getElementById("btnPerro").addEventListener("click", () => {
   const perro = new Perro("Olivia", "Salchipapa", 11);
 
   console.log(perro);
@@ -24,4 +24,4 @@ function mostrarPerro() {
     <h3>Perro</h3>
     ${perro.obtenerInfo()}
   `;
-}
+});

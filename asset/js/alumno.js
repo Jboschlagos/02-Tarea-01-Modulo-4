@@ -14,8 +14,8 @@ class Alumno {
   }
 }
 
-function mostrarAlumno() {
-  const alumno = new Alumno("Jorge", 46, "Desarrollador Web");
+document.getElementById("btnAlumno").addEventListener("click", () => {
+  const alumno = new Alumno("Jorge Bosch", 46, "Aprendiz de Desarrollo web y Mueblista");
 
   console.log(alumno);
 
@@ -23,4 +23,4 @@ function mostrarAlumno() {
     <h3>Alumno</h3>
     ${alumno.obtenerInfo()}
   `;
-}
+});

@@ -11,7 +11,6 @@ class BandaMusical {
       <p><strong>Banda:</strong> ${this.nombre}</p>
       <p><strong>Género:</strong> ${this.genero}</p>
       <p><strong>Integrantes:</strong> ${this.integrantes}</p>
-      <p><strong>Discos:</strong></p>
       <ul>
         ${this.discos.map(d => `<li>${d}</li>`).join("")}
       </ul>
@@ -19,8 +18,12 @@ class BandaMusical {
   }
 }
 
-function mostrarBanda() {
-  const banda = new BandaMusical( "Pink Floyd", "Rock progresivo", 5, ["The Dark Side of the Moon", "Wish You Were Here", "The Wall"]
+document.getElementById("btnBanda").addEventListener("click", () => {
+  const banda = new BandaMusical(
+    "Pink Floyd",
+    "Rock progresivo",
+    5,
+    ["The Dark Side of the Moon", "The Wall"]
   );
 
   console.log(banda);
@@ -29,4 +32,4 @@ function mostrarBanda() {
     <h3>Banda Musical</h3>
     ${banda.obtenerInfo()}
   `;
-}
+});
